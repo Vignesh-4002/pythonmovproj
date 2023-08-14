@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity = "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin = "anonymous">
+    <link rel = "stylesheet" href = "{% static 'style.css' %}">
+</head>
+<body>
+<!-- Image and text -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    MOVIEZ MANIA
+  </a>
+
+    <a class="btn btn-sm btn-outline-secondary"   href="{% url 'movieapp:index' %}">
+    home
+  </a>
+     <a class="btn btn-sm btn-outline-secondary" href="{% url 'movieapp:add_movie' %}">
+        Add_Movie
+    </a>
+</nav>
+<br>
+{% block body %}
+{% endblock %}
+</body>
+</html>

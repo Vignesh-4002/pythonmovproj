@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block body %}
+<form method="post" enctype="multipart/form-data">
+    <fieldset>
+        <legend>UPDATE FIELD</legend>
+        {{form.as_p}}
+    </fieldset>
+
+</form><a href="{% url 'movieapp:detail' movie.id %}">back</a>
+{% endblock %}
